@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>M School - Selamat Datang di M School</title>
+    <title>PT POMI - Selamat Datang di PT POMI</title>
     <link rel="shorcut icon" href="<?php echo base_url().'theme/images/icon.png'?>">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo base_url().'theme/css/bootstrap.min.css'?>">
@@ -37,13 +37,13 @@
                 <div class="col-xs-6 col-sm-8 col-md-9">
                     <div class="header-top_address">
                         <div class="header-top_list">
-                            <span class="icon-phone"></span>081211686202
+                            <span class="icon-phone"></span>(0335) 772369/771967
                         </div>
                         <div class="header-top_list">
-                            <span class="icon-envelope-open"></span>dimascr27@gmail.com
+                            <span class="icon-envelope-open"></span>paiton.co.id
                         </div>
                         <div class="header-top_list">
-                            <span class="icon-location-pin"></span>Jember, Jawa Timur, INA. 11001
+                            <span class="icon-location-pin"></span>Paiton, Kabupaten Probolinggo, Jawa Timur 67291
                         </div>
                     </div>
                     <div class="header-top_login2">
@@ -58,8 +58,7 @@
             </div>
         </div>
     </div>
-
-    <div data-toggle="affix" style="border-bottom:solid 1px #f2f2f2;">
+    <div data-toggle="affix">
         <div class="container nav-menu2">
             <div class="row">
                 <div class="col-md-12">
@@ -67,29 +66,26 @@
                         <button class="navbar-toggler navbar-toggler2 navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
                             <span class="icon-menu"></span>
                         </button>
-                        <a href="<?php echo site_url('');?>" class="navbar-brand nav-brand2"><img class="img img-responsive" width="200px;" src="<?php echo base_url().'theme/images/logo-dark.PNG'?>"></a>
+                        <a href="<?php echo site_url('');?>" class="navbar-brand nav-brand2"><img class="img img-responsive" width="150px;" src="<?php echo base_url().'theme/images/POMI.png'?>"></a>
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php echo site_url('');?>">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo site_url('about');?>">About</a>
+                                    <a class="nav-link" href="<?php echo site_url('about');?>">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo site_url('guru');?>">Guru</a>
+                                    <a class="nav-link" href="<?php echo site_url('guru');?>">Karyawan</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo site_url('siswa');?>">Siswa</a>
+                                    <a class="nav-link" href="<?php echo site_url('blog');?>">Activity</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo site_url('blog');?>">Blog</a>
+                                    <a class="nav-link" href="<?php echo site_url('pengumuman');?>">News</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo site_url('pengumuman');?>">Pengumuman</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo site_url('agenda');?>">Agenda</a>
+                                    <a class="nav-link" href="<?php echo site_url('agenda');?>">Achievement</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php echo site_url('download');?>">Download</a>
@@ -100,15 +96,14 @@
                                 <li class="nav-item">
                                   <a class="nav-link" href="<?php echo site_url('contact');?>">Contact</a>
                                 </li>
-                          </ul>
+                             </ul>
                         </div>
-                  </nav>
+                    </nav>
                 </div>
-              </div>
             </div>
         </div>
-    <section>
-</section>
+      </div>
+<section>
     <div class="slider_img layout_two">
         <div id="carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -116,15 +111,13 @@
                 <li data-target="#carousel" data-slide-to="1"></li>
                 <li data-target="#carousel" data-slide-to="2"></li>
             </ol>
-
-            
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                    <img class="d-block" src="<?php echo base_url().'theme/images/slider.jpg'?>" alt="First slide">
+                    <img class="d-block" src="<?php echo base_url().'theme/images/PLTU.jpg'?>" alt="First slide">
                     <div class="carousel-caption d-md-block">
                         <div class="slider_title">
-                            <h1>Bepikir Kreaftif &amp; Inovatif</h1>
-                            <h4>Bagi kami kreativitas merupakan gerbang masa depan.<br> kreativitas akan mendorong inovasi. <br> Itulah yang kami lakukan.</h4>
+                            <h1>PT PAITON OPERATION &amp; MAINTENANCE INDONESIA</h1>
+                            <h4>A world class power generation O&M Company.</h4>
                             <div class="slider-btn">
                                 <a href="<?php echo site_url('artikel');?>" class="btn btn-default">Learn more</a>
                             </div>
@@ -132,11 +125,11 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block" src="<?php echo base_url().'theme/images/slider-2.jpg'?>" alt="Second slide">
+                    <img class="d-block" src="<?php echo base_url().'theme/images/PLTU-4.jpg'?>" alt="Second slide">
                     <div class="carousel-caption d-md-block">
                         <div class="slider_title">
-                            <h1>Guru Bekualitas Tinggi</h1>
-                            <h4>Guru merupakan faktor penting dalam proses belajar-mengajar.<br> Itulah kenapa kami mendatangkan guru-guru <br>terbaik dari berbagai penjuru.</h4>
+                            <h1>PT PAITON OPERATION &amp; MAINTENANCE INDONESIA</h1>
+                            <h4>A world class power generation O&M Company.</h4>
                             <div class="slider-btn">
                                 <a href="<?php echo site_url('guru');?>" class="btn btn-default">Learn more</a>
                             </div>
@@ -144,11 +137,11 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block" src="<?php echo base_url().'theme/images/slider-3.jpg'?>" alt="Third slide">
+                    <img class="d-block" src="<?php echo base_url().'theme/images/PLTU-3.jpg'?>" alt="Third slide">
                     <div class="carousel-caption d-md-block">
                         <div class="slider_title">
-                            <h1>Proses Belajar Interatif</h1>
-                            <h4>Kami membuat proses belajar mengajar menjadi lebih interatif.<br> dengan demikian siswa lebih menyukai <br>proses belajar.</h4>
+                            <h1>PT PAITON OPERATION &amp; MAINTENANCE INDONESIA</h1>
+                            <h4>A world class power generation O&M Company.</h4>
                             <div class="slider-btn">
                                 <a href="<?php echo site_url('galeri');?>" class="btn btn-default">Learn more</a>
                             </div>
@@ -174,11 +167,13 @@
         <div class="row">
             <div class="col-md-8">
                <h2>Welcome</h2>
-               <p>Kami Menyambut baik terbitnya Website MSCHOOL yang baru , dengan harapan dipublikasinya website ini sekolah berharap : Peningkatan layanan pendidikan kepada siswa, orangtua, dan masyarakat pada umumnya semakin meningkat. </p>
+               <p>Tahun 2021 merupakan tahun yang tidak kalah menantang dari tahun sebelumnya yaitu munculnya wabah covid 19 diseluruh penjuru dunia, jika pada tahun 2020 setiap perusahaan berjibaku dalam penanganan dan pencegahan covid 19, maka di tahun ini 2021 hampir semua perusahaan mencoba menerapkan hidup damai berdampingan dengan covid 19, 
+                strategi arah kebijakan perusahaan juga menyesuaikan dengan kondisi yang menuntut adaptasi dari semua pihak. Dalam hal pelaksanaan CSR, PT POMI berusaha untuk memenuhi perencanaan, dengan tetap mengutamakan keselamatan dan prosedur kesehatan. Ada Program yang tertunda, ada pula program yang dialihkan, dan bahkan ada program yang dibatalkan, semua itu terjadi sebagai bentuk adaptasi dan merupakan ketrampilan tersendiri bagi kami dalam mensiasati situasi pandemi. Meskipun banyak tantangan, tahun 2021 perusahaan tetap bergerak untuk meraih prestasi. Beberapa penghargaan dapat diraih di bidang pengembangan masyarakat, lingkungan dan kinerja perusahaan. Tantangan berikutnya adalah memperkuat 
+                soliditas dan solidaritas team untuk mewujudkan tujuan dan komitmen perusahaan.</p>
 
             </div>
             <div class="col-md-4">
-                <img src="<?php echo base_url().'theme/images/welcome.png'?>" class="img-fluid about-img" alt="#">
+                <img src="<?php echo base_url().'theme/images/direktur.jpg'?>" class="img-fluid about-img" alt="#">
             </div>
         </div>
     </div>
@@ -189,7 +184,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>Artikel Terbaru</h2>
+                <h2>News Activity</h2>
             </div>
         </div>
         <div class="row">
@@ -259,7 +254,37 @@
 </section>
 <!--//END EVENTS -->
 <!--============================= DETAILED CHART =============================-->
-
+<div class="detailed_chart">
+    <div class="container">    
+    <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3 chart_bottom">
+            <img src="<?php echo base_url().'theme/images/chart-icon_1.png'?>" class="img-fluid" alt="chart_icon" >
+                </div>
+                <div class="chart-text" style="text-align:center">
+                    <p><span class="counter"><?php echo $tot_guru;?></span> Karyawan
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 chart_top"  style="text-align:center">
+                <div class="chart-img">
+                    <img src="<?php echo base_url().'theme/images/chart-icon_3.png'?>" class="img-fluid" alt="chart_icon">
+                </div>
+                <div class="chart-text">
+                    <p><span class="counter"><?php echo $tot_files;?></span> Download
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3"  style="text-align:center">
+                <div class="chart-img">
+                    <img src="<?php echo base_url().'theme/images/chart-icon_4.png'?>" class="img-fluid" alt="chart_icon">
+                </div>
+                <div class="chart-text">
+                    <p><span class="counter"><?php echo $tot_agenda;?></span> Agenda</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!--//END DETAILED CHART -->
 <!--============================= FOOTER =============================-->
 <footer>
@@ -268,9 +293,9 @@
             <div class="col-md-3">
                 <div class="foot-logo">
                     <a href="<?php echo site_url();?>">
-                        <img src="<?php echo base_url().'theme/images/pomi-white.jpg'?>" class="img-fluid" alt="footer_logo">
+                        <img src="<?php echo base_url().'theme/images/POMI.png'?>" class="img-fluid" alt="footer_logo">
                     </a>
-                    <p><?php echo date('Y');?> © copyright by <a href="http://mfikri.com" target="_blank">Dimas Cahya Ramadhan</a>. <br>All rights reserved.</p>
+                    <p><?php echo date('Y');?> © copyright by <a href="http://mfikri.com" target="_blank">M Fikri</a>. <br>All rights reserved.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -278,8 +303,8 @@
                         <h3>Menu Utama</h3>
                         <ul>
                             <li><a href="<?php echo site_url();?>">Home</a></li>
-                            <li><a href="<?php echo site_url('about');?>">About</a></li>
-                            <li><a href="<?php echo site_url('artikel');?>">Blog </a></li>
+                            <li><a href="<?php echo site_url('about');?>">About uS</a></li>
+                            <li><a href="<?php echo site_url('artikel');?>">Activity </a></li>
                             <li><a href="<?php echo site_url('galeri');?>">Gallery</a></li>
                             <li><a href="<?php echo site_url('contact');?>">Contact</a></li>
                         </ul>
@@ -289,10 +314,9 @@
                   <div class="sitemap">
                       <h3>Akademik</h3>
                       <ul>
-                          <li><a href="<?php echo site_url('guru');?>">Guru</a></li>
-                          <li><a href="<?php echo site_url('siswa');?>">Siswa </a></li>
-                          <li><a href="<?php echo site_url('pengumuman');?>">Pengumuman</a></li>
-                          <li><a href="<?php echo site_url('agenda');?>">Agenda</a></li>
+                          <li><a href="<?php echo site_url('guru');?>">Karyawan</a></li>
+                          <li><a href="<?php echo site_url('pengumuman');?>">News</a></li>
+                          <li><a href="<?php echo site_url('agenda');?>">Achievement</a></li>
                           <li><a href="<?php echo site_url('download');?>">Download</a></li>
                       </ul>
                   </div>
@@ -300,8 +324,8 @@
                 <div class="col-md-3">
                     <div class="address">
                         <h3>Hubungi Kami</h3>
-                        <p><span>Alamat: </span> Padang, Sumatera Barat, INA. 11001</p>
-                        <p>Email : info@mschool.com
+                        <p><span>Alamat: </span> Paiton, Kabupaten Probolinggo, Jawa Timur 67291</p>
+                        <p>Email : paiton.co.id
                             <br> Phone : +91 555 668 986</p>
                             <ul class="footer-social-icons">
                                 <li><a href="#"><i class="fa fa-facebook fa-fb" aria-hidden="true"></i></a></li>
