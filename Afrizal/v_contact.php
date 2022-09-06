@@ -200,7 +200,7 @@
                 </div>
                 <div class="col-md-3">
                   <div class="sitemap">
-                      <h3>Akademik</h3>
+                      <h3>Halaman</h3>
                       <ul>
                           <li><a href="<?php echo site_url('guru');?>">Karyawan</a></li>
                           <li><a href="<?php echo site_url('pengumuman');?>">News</a></li>
