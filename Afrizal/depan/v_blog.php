@@ -5,8 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Contact</title>
-    <link rel="shorcut icon" href="<?php echo base_url().'theme/images/icon.png'?>">
+    <title>Activity</title>
+    <link rel="shorcut icon" href="<?php echo base_url().'theme/images/IC.png'?>">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo base_url().'theme/css/bootstrap.min.css'?>">
     <!-- Google Fonts -->
@@ -19,17 +19,23 @@
     <link rel="stylesheet" href="<?php echo base_url().'theme/css/owl.carousel.min.css'?>">
     <!-- Main CSS -->
     <link href="<?php echo base_url().'theme/css/style.css'?>" rel="stylesheet">
+    <?php
+        function limit_words($string, $word_limit){
+            $words = explode(" ",$string);
+            return implode(" ",array_splice($words,0,$word_limit));
+        }
+    ?>
 </head>
 
 <body>
   <!--============================= HEADER =============================-->
   <div class="header-topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6 col-sm-8 col-md-9">
-                    <div class="header-top_address">
-                        <div class="header-top_list">
-                            <span class="icon-phone"></span>(0335) 772369/771967
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-6 col-sm-8 col-md-9">
+                  <div class="header-top_address">
+                      <div class="header-top_list">
+                      <span class="icon-phone"></span>(0335) 772369/771967
                         </div>
                         <div class="header-top_list">
                             <span class="icon-envelope-open"></span>paiton.co.id
@@ -45,11 +51,11 @@
                 <div class="col-xs-6 col-sm-4 col-md-3">
                     <div class="header-top_login mr-sm-3">
                         <a href="<?php echo site_url('contact');?>">Hubungi Kami</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
   <div data-toggle="affix" style="border-bottom:solid 1px #f2f2f2;">
       <div class="container nav-menu2">
           <div class="row">
@@ -61,8 +67,8 @@
                       <a href="<?php echo site_url('');?>" class="navbar-brand nav-brand2"><img class="img img-responsive" width="200px;" src="<?php echo base_url().'theme/images/POMI.png'?>"></a>
                       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                           <ul class="navbar-nav">
-                              <li class="nav-item">
-                              <a class="nav-link" href="<?php echo site_url('');?>">Home</a>
+                          <li class="nav-item">
+                                    <a class="nav-link" href="<?php echo site_url('');?>">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php echo site_url('about');?>">About Us</a>
@@ -88,105 +94,89 @@
                                 <li class="nav-item">
                                   <a class="nav-link" href="<?php echo site_url('contact');?>">Contact</a>
                                 </li>
-                             </ul>
-                        </div>
-                    </nav>
-                </div>
+                        </ul>
+                  </div>
+                </nav>
+              </div>
             </div>
+          </div>
         </div>
-      </div>
-<section>
+    <section>
 </section>
 <!--//END HEADER -->
-<section class="contact">
+<!--============================= BLOG =============================-->
+<section class="blog-wrap">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="contact-title">
-                    <h2>Hubungi Kami</h2>
+            <div class="col-md-8">
+              <?php echo $this->session->flashdata('msg');?>
+              <?php foreach ($data->result() as $row) : ?>
+                <div class="blog-single-item">
+                    <div class="blog-img_block">
+                        <img src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" class="img-fluid" alt="blog-img">
+                        <div class="blog-date">
+                            <span><?php echo $row->tanggal;?></span>
+                        </div>
+                    </div>
+                    <div class="blog-tiltle_block">
+                        <h4><a href="<?php echo site_url('artikel/'.$row->tulisan_slug);?>"><?php echo $row->tulisan_judul;?></a></h4>
+                        <h6> <a href="#"><i class="fa fa-user" aria-hidden="true"></i><span><?php echo $row->tulisan_author;?></span> </a>  |   <a href="#"><i class="fa fa-tags" aria-hidden="true"></i><span><?php echo $row->tulisan_kategori_nama;?></span></a></h6>
+                        <?php echo limit_words($row->tulisan_isi,10).'...';?>
+                        <div class="blog-icons">
+                            <div class="blog-share_block">
+                                <a href="<?php echo site_url('artikel/'.$row->tulisan_slug);?>">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+              <?php endforeach;?>
+                <nav>
+                    <?php error_reporting(0); echo $page;?>
+                </nav>
+            </div>
+            <div class="col-md-4">
+                <form action="<?php echo site_url('blog/search');?>" method="get">
+                    <input type="text" name="keyword" placeholder="Search" class="blog-search" required>
+                    <button type="submit" class="btn btn-warning btn-blogsearch">SEARCH</button>
+                </form>
+                <div class="blog-category_block">
+                  <h3>Kategori</h3>
+                  <ul>
+                    <?php foreach ($category->result() as $row) : ?>
+                      <li><a href="<?php echo site_url('blog/kategori/'.str_replace(" ","-",$row->kategori_nama));?>"><?php echo $row->kategori_nama;?><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+                    <?php endforeach;?>
+                  </ul>
+                </div>
+                <div class="blog-featured_post">
+                    <h3>Populer</h3>
+                    <?php foreach ($populer->result() as $row) :?>
+                      <div class="blog-featured-img_block">
+                          <img width="35%" src="<?php echo base_url().'assets/images/'.$row->tulisan_gambar;?>" class="img-fluid" alt="blog-featured-img">
+                          <h5><a href="<?php echo site_url('artikel/'.$row->tulisan_slug);?>"><?php echo limit_words($row->tulisan_judul,3).'...';?></a></h5>
+                          <p><?php echo limit_words($row->tulisan_isi,5).'...';?></p>
+                      </div>
+                      <hr>
+                    <?php endforeach;?>
+                </div>
+
             </div>
         </div>
+    </div>
+</section>
+<!--//END BLOG -->
+<!--============================= FOOTER =============================-->
+<footer>
+    <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="contact-form">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-6 contact-option">
-                            <div class="contact-option_rsp">
-                                <h3>Tinggalkan Pesan</h3>
-                                <form action="<?php echo site_url('contact/kirim_pesan');?>" method="post">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name" name="xnama" required>
-                                    </div>
-                                    <!-- // end .form-group -->
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email" name="xemail" required>
-                                    </div>
-                                    <!-- // end .form-group -->
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Phone" name="xphone" required>
-                                    </div>
-                                    <!-- // end .form-group -->
-                                    <div class="form-group">
-                                        <textarea placeholder="Message" class="form-control" name="xmessage" required rows="5"></textarea>
-                                    </div>
-                                    <!-- // end .form-group -->
-                                    <button type="submit" class="btn btn-default btn-submit">SUBMIT</button>
-                                    <div><?php echo $this->session->flashdata('msg');?></div>
-                                    <!-- // end #js-contact-result -->
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6">
-                            <div class="contact-address">
-                                <h3>Lokasi</h3>
-                                <div class="contact-details">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <h6>Alamat</h6>
-                                    <p> Jalan Surabaya Situbondo Km. 141, Bhinor, Kabupaten Probolinggo
-                                        <br> Jawa Timur
-                                        <br> Indonesia. 67291</p>
-                                    </div>
-                                    <br>
-                                    <div class="contact-details">
-                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                        <h6>Email</h6>
-                                        <p>paiton.co.id
-                                        </p>
-                                    </div>
-                                    <br>
-                                    <div class="contact-details">
-                                        <i class="fa fa-phone" aria-hidden="true"></i>
-                                        <h6>Phone</h6>
-                                        <p>(0335) 772369/771967</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col-md-3">
+                <div class="foot-logo">
+                    <a href="<?php echo site_url();?>">
+                        <img src="<?php echo base_url().'theme/images/Pomi_white.jpg'?>" class="img-fluid" alt="footer_logo">
+                    </a>
+                    <p><?php echo date('Y');?> © copyright by <a href="http://pomi.co.id" target="_blank">PT POMI</a>. <br>All rights reserved.</p>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="contact-center">OR</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--//END  ABOUT IMAGE -->
-    <!--============================= FOOTER =============================-->
-    <footer>
-        <div class="container">
-            <div class="row">
                 <div class="col-md-3">
-                    <div class="foot-logo">
-                        <a href="<?php echo site_url();?>">
-                            <img src="<?php echo base_url().'theme/images/pomi_white.jpg'?>" class="img-fluid" alt="footer_logo">
-                        </a>
-                        <p><?php echo date('Y');?> © copyright by <a href="http://POMI.com" target="_blank">PT POMI</a>. <br>All rights reserved.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
                     <div class="sitemap">
                         <h3>Menu Utama</h3>
                         <ul>
@@ -200,7 +190,7 @@
                 </div>
                 <div class="col-md-3">
                   <div class="sitemap">
-                      <h3>Halaman</h3>
+                  <h3>Halaman</h3>
                       <ul>
                           <li><a href="<?php echo site_url('guru');?>">Karyawan</a></li>
                           <li><a href="<?php echo site_url('pengumuman');?>">News</a></li>
@@ -225,19 +215,19 @@
                 </div>
             </div>
         </footer>
-            <!--//END FOOTER -->
-            <!-- jQuery, Bootstrap JS. -->
-            <script src="<?php echo base_url().'theme/js/jquery.min.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/tether.min.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/bootstrap.min.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/owl.carousel.min.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/validate.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/tweetie.min.js'?>"></script>
-            <!-- Subscribe / Contact-->
-            <script src="<?php echo base_url().'theme/js/subscribe.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/contact.js'?>"></script>
-            <!-- Script JS -->
-            <script src="<?php echo base_url().'theme/js/script.js'?>"></script>
-        </body>
+        <!--//END FOOTER -->
+        <!-- jQuery, Bootstrap JS. -->
+        <script src="<?php echo base_url().'theme/js/jquery.min.js'?>"></script>
+        <script src="<?php echo base_url().'theme/js/tether.min.js'?>"></script>
+        <script src="<?php echo base_url().'theme/js/bootstrap.min.js'?>"></script>
+        <!-- Plugins -->
+        <script src="<?php echo base_url().'theme/js/owl.carousel.min.js'?>"></script>
+        <script src="<?php echo base_url().'theme/js/validate.js'?>"></script>
+        <script src="<?php echo base_url().'theme/js/tweetie.min.js'?>"></script>
+        <!-- Subscribe -->
+        <script src="<?php echo base_url().'theme/js/subscribe.js'?>"></script>
+        <!-- Script JS -->
+        <script src="<?php echo base_url().'theme/js/script.js'?>"></script>
+    </body>
 
-        </html>
+    </html>

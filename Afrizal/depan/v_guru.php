@@ -5,8 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Download</title>
-    <link rel="shorcut icon" href="<?php echo base_url().'theme/images/icon.png'?>">
+    <title>Karyawan</title>
+    <link rel="shorcut icon" href="<?php echo base_url().'theme/images/IC.png'?>">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo base_url().'theme/css/bootstrap.min.css'?>">
     <!-- Google Fonts -->
@@ -16,22 +16,22 @@
     <!-- Simple Line Font -->
     <link rel="stylesheet" href="<?php echo base_url().'theme/css/simple-line-icons.css'?>">
     <!-- Owl Carousel -->
+    <link rel="stylesheet" href="<?php echo base_url().'theme/css/slick.css'?>">
+    <link rel="stylesheet" href="<?php echo base_url().'theme/css/slick-theme.css'?>">
     <link rel="stylesheet" href="<?php echo base_url().'theme/css/owl.carousel.min.css'?>">
     <!-- Main CSS -->
     <link href="<?php echo base_url().'theme/css/style.css'?>" rel="stylesheet">
-    <link href="<?php echo base_url().'theme/css/dataTables.bootstrap4.min.css'?>" rel="stylesheet">
-
 </head>
 
 <body>
   <!--============================= HEADER =============================-->
   <div class="header-topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6 col-sm-8 col-md-9">
-                    <div class="header-top_address">
-                        <div class="header-top_list">
-                            <span class="icon-phone"></span>(0335) 772369/771967
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-6 col-sm-8 col-md-9">
+                  <div class="header-top_address">
+                      <div class="header-top_list">
+                      <span class="icon-phone"></span>(0335) 772369/771967
                         </div>
                         <div class="header-top_list">
                             <span class="icon-envelope-open"></span>paiton.co.id
@@ -47,11 +47,11 @@
                 <div class="col-xs-6 col-sm-4 col-md-3">
                     <div class="header-top_login mr-sm-3">
                         <a href="<?php echo site_url('contact');?>">Hubungi Kami</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
   <div data-toggle="affix" style="border-bottom:solid 1px #f2f2f2;">
       <div class="container nav-menu2">
           <div class="row">
@@ -90,59 +90,46 @@
                                 <li class="nav-item">
                                   <a class="nav-link" href="<?php echo site_url('contact');?>">Contact</a>
                                 </li>
-                             </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-      </div>
-<section>
-<!--//END HEADER -->
-<section class="contact" style="margin-bottom:50px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="contact-title">
-                    <h2>Download</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-              <div class="table-responsive">
-                <table class="table table-striped" id="display">
-                  <thead>
-                    <tr>
-                      <th>No</th>
-                      <th>Files</th>
-                      <th>Tanggal</th>
-                      <th>Oleh</th>
-                      <th style="text-align:right;">Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php
-                      $no=1;
-                      foreach ($data->result() as $row):
-                    ?>
-                    <tr>
-                      <td><?php echo $no++;?></td>
-                      <td><?php echo $row->file_judul;?></td>
-                      <td><?php echo $row->tanggal;?></td>
-                      <td><?php echo $row->file_oleh;?></td>
-                      <td style="text-align:right;"><a href="<?php echo site_url('download/get_file/'.$row->file_id);?>" class="btn btn-info">Download</a></td>
-                    </tr>
-                  <?php endforeach;?>
-                  </tbody>
-                </table>
+                        </ul>
+                  </div>
+                </nav>
               </div>
             </div>
           </div>
         </div>
-    </section>
-    <!--//END  ABOUT IMAGE -->
+    <section>
+</section>
+<!--//END HEADER -->
 
+    <section class="our-teachers">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="mb-5">Karyawan PT Paiton Operation & Maintenance Indonesia</h2>
+                </div>
+            </div>
+            <div class="row">
+                <?php foreach ($data->result() as $row) : ?>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="admission_insruction">
+                          <?php if(empty($row->guru_photo)):?>
+                            <img src="<?php echo base_url().'assets/images/blank.png';?>" class="img-fluid" alt="#">
+                          <?php else:?>
+                            <img src="<?php echo base_url().'assets/images/'.$row->guru_photo;?>" class="img-fluid" alt="#">
+                          <?php endif;?>
+                            <p class="text-center mt-3"><span><?php echo $row->guru_nama;?></span>
+                                <br>
+                                <?php echo $row->guru_mapel;?></p>
+                        </div>
+                    </div>
+                <?php endforeach;?>
+              </div>
+            <!-- End row -->
+            <nav><?php echo $page;?></nav>
+        </div>
+    </section>
+
+    <!--//End Style 2 -->
     <!--============================= FOOTER =============================-->
     <footer>
         <div class="container">
@@ -150,12 +137,12 @@
                 <div class="col-md-3">
                     <div class="foot-logo">
                         <a href="<?php echo site_url();?>">
-                            <img src="<?php echo base_url().'theme/images/pomi_white.jpg'?>" class="img-fluid" alt="footer_logo">
+                            <img src="<?php echo base_url().'theme/images/Pomi_white.jpg'?>" class="img-fluid" alt="footer_logo">
                         </a>
-                        <p><?php echo date('Y');?> © copyright by <a href="http://POMI.com" target="_blank">PT POMI</a>. <br>All rights reserved.</p>
-                        </div>
+                        <p><?php echo date('Y');?> © copyright by <a href="http://pomi.co.id" target="_blank">PT POMI</a>. <br>All rights reserved.</p>
                     </div>
-                    <div class="col-md-3">
+                </div>
+                <div class="col-md-3">
                     <div class="sitemap">
                         <h3>Menu Utama</h3>
                         <ul>
@@ -169,7 +156,7 @@
                 </div>
                 <div class="col-md-3">
                   <div class="sitemap">
-                  <h3>Halaman</h3>
+                      <h3>Halaman</h3>
                       <ul>
                           <li><a href="<?php echo site_url('guru');?>">Karyawan</a></li>
                           <li><a href="<?php echo site_url('pengumuman');?>">News</a></li>
@@ -196,24 +183,20 @@
         </footer>
             <!--//END FOOTER -->
             <!-- jQuery, Bootstrap JS. -->
-            <script src="<?php echo base_url().'theme/js/jquery.min.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/tether.min.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/bootstrap.min.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/owl.carousel.min.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/validate.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/tweetie.min.js'?>"></script>
-            <!-- Subscribe / Contact-->
-            <script src="<?php echo base_url().'theme/js/subscribe.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/contact.js'?>"></script>
-            <!-- Script JS -->
-            <script src="<?php echo base_url().'theme/js/script.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/jquery.dataTables.min.js'?>"></script>
-            <script src="<?php echo base_url().'theme/js/dataTables.bootstrap4.min.js'?>"></script>
-            <script>
-              $(document).ready(function() {
-                $('#display').DataTable();
-              });
-            </script>
-      </body>
+    <script src="<?php echo base_url().'theme/js/jquery.min.js'?>"></script>
+    <script src="<?php echo base_url().'theme/js/tether.min.js'?>"></script>
+    <script src="<?php echo base_url().'theme/js/bootstrap.min.js'?>"></script>
+    <!-- Plugins -->
+    <script src="<?php echo base_url().'theme/js/slick.min.js'?>"></script>
+    <script src="<?php echo base_url().'theme/js/waypoints.min.js'?>"></script>
+    <script src="<?php echo base_url().'theme/js/counterup.min.js'?>"></script>
+    <script src="<?php echo base_url().'theme/js/owl.carousel.min.js'?>"></script>
+    <script src="<?php echo base_url().'theme/js/validate.js'?>"></script>
+    <script src="<?php echo base_url().'theme/js/tweetie.min.js'?>"></script>
+    <!-- Subscribe -->
+    <script src="<?php echo base_url().'theme/js/subscribe.js'?>"></script>
+    <!-- Script JS -->
+    <script src="<?php echo base_url().'theme/js/script.js'?>"></script>
+</body>
 
 </html>

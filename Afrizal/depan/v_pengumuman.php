@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Gallery Photo</title>
-  <link rel="shorcut icon" href="<?php echo base_url().'theme/images/icon.png'?>">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="<?php echo base_url().'theme/css/bootstrap.min.css'?>">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="<?php echo base_url().'theme/css/font-awesome.min.css'?>">
-  <!-- Simple Line Font -->
-  <link rel="stylesheet" href="<?php echo base_url().'theme/css/simple-line-icons.css'?>">
-  <!-- Magnific Popup CSS -->
-  <link rel="stylesheet" href="<?php echo base_url().'theme/css/magnific-popup.css'?>">
-  <!-- Image Hover CSS -->
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url().'theme/css/normalize.css'?>" />
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url().'theme/css/set2.css'?>" />
 
-  <!-- Masonry Gallery -->
-  <link href="<?php echo base_url().'theme/css/animated-masonry-gallery.css'?>" rel="stylesheet" type="text/css" />
-  <!-- Main CSS -->
-  <link href="<?php echo base_url().'theme/css/style.css'?>" rel="stylesheet">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pengumuman</title>
+    <link rel="shorcut icon" href="<?php echo base_url().'theme/images/IC.png'?>">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="<?php echo base_url().'theme/css/bootstrap.min.css'?>">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="<?php echo base_url().'theme/css/font-awesome.min.css'?>">
+    <!-- Simple Line Font -->
+    <link rel="stylesheet" href="<?php echo base_url().'theme/css/simple-line-icons.css'?>">
+    <!-- Calendar Css -->
+    <link rel="stylesheet" href="<?php echo base_url().'theme/css/fullcalendar.min.css'?>" />
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="<?php echo base_url().'theme/css/owl.carousel.min.css'?>">
+    <!-- Main CSS -->
+    <link href="<?php echo base_url().'theme/css/style.css'?>" rel="stylesheet">
 </head>
 
 <body>
   <!--============================= HEADER =============================-->
   <div class="header-topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6 col-sm-8 col-md-9">
-                    <div class="header-top_address">
-                        <div class="header-top_list">
-                            <span class="icon-phone"></span>(0335) 772369/771967
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-6 col-sm-8 col-md-9">
+                  <div class="header-top_address">
+                      <div class="header-top_list">
+                      <span class="icon-phone"></span>(0335) 772369/771967
                         </div>
                         <div class="header-top_list">
                             <span class="icon-envelope-open"></span>paiton.co.id
@@ -50,11 +47,11 @@
                 <div class="col-xs-6 col-sm-4 col-md-3">
                     <div class="header-top_login mr-sm-3">
                         <a href="<?php echo site_url('contact');?>">Hubungi Kami</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
   <div data-toggle="affix" style="border-bottom:solid 1px #f2f2f2;">
       <div class="container nav-menu2">
           <div class="row">
@@ -66,8 +63,8 @@
                       <a href="<?php echo site_url('');?>" class="navbar-brand nav-brand2"><img class="img img-responsive" width="200px;" src="<?php echo base_url().'theme/images/POMI.png'?>"></a>
                       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                           <ul class="navbar-nav">
-                              <li class="nav-item">
-                              <a class="nav-link" href="<?php echo site_url('');?>">Home</a>
+                          <li class="nav-item">
+                                    <a class="nav-link" href="<?php echo site_url('');?>">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php echo site_url('about');?>">About Us</a>
@@ -93,58 +90,81 @@
                                 <li class="nav-item">
                                   <a class="nav-link" href="<?php echo site_url('contact');?>">Contact</a>
                                 </li>
-                             </ul>
-                        </div>
-                    </nav>
-                </div>
+                        </ul>
+                  </div>
+                </nav>
+              </div>
             </div>
+          </div>
         </div>
-      </div>
-<section>
+    <section>
 </section>
 <!--//END HEADER -->
-  <!--============================= Gallery =============================-->
-  <div class="gallery-wrap">
+<!--============================= EVENTS =============================-->
+<section class="events">
     <div class="container">
-<!-- Style 2 -->
-<div class="row">
-  <div class="col-md-12">
-    <h3 class="gallery-style">Gallery Photo</h3>
-  </div>
-</div><br>
-<div class="row">
-  <div class="col-md-12">
-    <div id="gallery">
-      <div id="gallery-content">
-        <div id="gallery-content-center">
-          <?php foreach ($all_galeri->result() as $row) : ?>
-            <a href="<?php echo base_url().'assets/images/'.$row->galeri_gambar;?>" class="image-link2">
-             <img src="<?php echo base_url().'assets/images/'.$row->galeri_gambar;?>" class="all img-fluid" alt="#" />
-            </a>
-          <?php endforeach;?>
-       </div>
-     </div>
-   </div>
- </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="event-title">Pengumuman</h2>
+            </div>
+            <div class="col-md-8">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item nav-tab1">
+                        <a class="nav-link tab-list active" data-toggle="tab" href="#upcoming-events" role="tab">Pengumuman Terbaru </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="upcoming-events" role="tabpanel">
+                  <?php foreach($data->result() as $row):?>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="event-date">
+                                    <h4><?php echo date("d", strtotime($row->pengumuman_tanggal));?></h4> <span><?php echo date("M Y", strtotime($row->pengumuman_tanggal));?></span>
+                                </div>
+                                <span class="event-time"><?php echo date("H:i", strtotime($row->pengumuman_tanggal)).' WIB';?></span>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="event-heading">
+                                    <h3><?php echo $row->pengumuman_judul;?></h3>
+                                    <p><?php echo $row->pengumuman_deskripsi;?></p>
+                                </div>
+                          </div>
+                      </div>
+                      <hr class="event-underline">
+                  </div>
+                <?php endforeach;?>
+
+      <div class="col-md-12 text-center">
+        <?php echo $page;?>
+    </div>
 </div>
-<!--//End Style 2 -->
 
 </div>
 </div>
-<!--//End Gallery -->
+</div>
+</section>
+<!--//END EVENTS -->
 <!--============================= FOOTER =============================-->
 <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="foot-logo">
-                        <a href="<?php echo site_url();?>">
-                            <img src="<?php echo base_url().'theme/images/pomi_white.jpg'?>" class="img-fluid" alt="footer_logo">
-                        </a>
-                        <p><?php echo date('Y');?> © copyright by <a href="http://POMI.com" target="_blank">PT POMI</a>. <br>All rights reserved.</p>
-                        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="foot-logo">
+                    <a href="<?php echo site_url();?>">
+                        <img src="<?php echo base_url().'theme/images/Pomi_white.jpg'?>" class="img-fluid" alt="footer_logo">
+                    </a>
+                    <p><?php echo date('Y');?> © copyright by <a href="http://pomi.co.id" target="_blank">PT POMI</a>. <br>All rights reserved.</p>
                     </div>
-                    <div class="col-md-3">
+                </div>
+                <div class="col-md-3">
                     <div class="sitemap">
                         <h3>Menu Utama</h3>
                         <ul>
@@ -158,7 +178,7 @@
                 </div>
                 <div class="col-md-3">
                   <div class="sitemap">
-                  <h3>Halaman</h3>
+                      <h3>Halaman</h3>
                       <ul>
                           <li><a href="<?php echo site_url('guru');?>">Karyawan</a></li>
                           <li><a href="<?php echo site_url('pengumuman');?>">News</a></li>
@@ -183,29 +203,21 @@
                 </div>
             </div>
         </footer>
-    <!--//END FOOTER -->
+        <!--//END FOOTER -->
     <!-- jQuery, Bootstrap JS. -->
     <script src="<?php echo base_url().'theme/js/jquery.min.js'?>"></script>
     <script src="<?php echo base_url().'theme/js/tether.min.js'?>"></script>
     <script src="<?php echo base_url().'theme/js/bootstrap.min.js'?>"></script>
     <!-- Plugins -->
-    <script src="<?php echo base_url().'theme/js/slick.min.js'?>"></script>
-    <script src="<?php echo base_url().'theme/js/waypoints.min.js'?>"></script>
-    <script src="<?php echo base_url().'theme/js/counterup.min.js'?>"></script>
+    <script src="<?php echo base_url().'theme/js/moment.min.js'?>"></script>
+    <script src="<?php echo base_url().'theme/js/fullcalendar.min.js'?>"></script>
     <script src="<?php echo base_url().'theme/js/owl.carousel.min.js'?>"></script>
     <script src="<?php echo base_url().'theme/js/validate.js'?>"></script>
     <script src="<?php echo base_url().'theme/js/tweetie.min.js'?>"></script>
     <!-- Subscribe -->
     <script src="<?php echo base_url().'theme/js/subscribe.js'?>"></script>
-
-    <script src="<?php echo base_url().'theme/js/jquery-ui-1.10.4.min.js'?>"></script>
-    <script src="<?php echo base_url().'theme/js/jquery.isotope.min.js'?>"></script>
-    <script src="<?php echo base_url().'theme/js/animated-masonry-gallery.js'?>"></script>
-    <!-- Magnific popup JS -->
-    <script src="<?php echo base_url().'theme/js/jquery.magnific-popup.js'?>"></script>
     <!-- Script JS -->
     <script src="<?php echo base_url().'theme/js/script.js'?>"></script>
+</body>
 
-  </body>
-
-  </html>
+</html>
